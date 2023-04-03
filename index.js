@@ -15,7 +15,11 @@ console.log(mondayWork("work from home."));
 
 //Task3
 function wrapAdjective(symbol ="*"){
-    return function(adj){
+    return function(adj = "a hard worker"){
         return (`You are ${symbol}${adj}${symbol}!`)
     }
 }
+const asterisk = wrapAdjective("*");
+console.log(asterisk());
+const pipe = wrapAdjective("||");
+console.log(pipe("a dedicated programmer"));
